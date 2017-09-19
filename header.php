@@ -5,10 +5,8 @@
 <head>
 <meta charset="utf-8" />
 <?php if (strpos($_SERVER['HTTP_USER_AGENT'],"MSIE 8")) {header("X-UA-Compatible: IE=7");} ?>
-<title><?php wp_title('-', true, 'right'); ?></title>
+<title><?php bloginfo('name'); ?><?php wp_title('|', true, 'left'); ?></title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
-<link href='http://fonts.googleapis.com/css?family=Josefin+Sans:300,400' rel='stylesheet' type='text/css'>
 <?php wp_head(); ?>
 <!--[if lte IE 8]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script><![endif]-->
 </head>

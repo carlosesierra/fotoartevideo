@@ -6,7 +6,18 @@ h1,h2,h3,p{border: 0; padding: 0; margin: 0;}
 ul, ol{list-style-type: none;}
 img {max-width: 100%;height: auto;-ms-interpolation-mode: bicubic;}
 .container{width: 100%;position: relative;top: 100px;}
-#sidebar{width: 100%; display: inline-block;top:0; position:fixed; z-index:1111;background-color: rgba(255, 255, 255, 0.9)}
+#sidebar{width: 100%; display: inline-block;top:0; position:fixed; z-index:1111;/*background-color: rgba(255, 255, 255, 0.9)*/ 
+/*
+background: -moz-linear-gradient(-45deg, rgba(247,254,255,0.5) 0%, rgba(249,192,249,0.5) 100%);
+background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,rgba(247,254,255,0.5)), color-stop(100%,rgba(249,192,249,0.5)));
+background: -webkit-linear-gradient(-45deg, rgba(247,254,255,0.5) 0%,rgba(249,192,249,0.5) 100%);
+background: -o-linear-gradient(-45deg, rgba(247,254,255,0.5) 0%,rgba(249,192,249,0.5) 100%);
+background: -ms-linear-gradient(-45deg, rgba(247,254,255,0.5) 0%,rgba(249,192,249,0.5) 100%);
+background: linear-gradient(135deg, rgba(247,254,255,0.5) 0%,rgba(249,192,249,0.5) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80f7feff', endColorstr='#80f9c0f9',GradientType=1 );
+*/
+background-image: url('../css/img/sidebar.jpg');
+}
 
 .title, small, .comments-area h2, .comment-reply-title{background-color: rgba(40, 40, 40, 1);display: block; width: 100%; height: auto;line-height: inherit; font-weight: 300; }
 .title a, small a{color: #fff;font-size: 16px;width: 90%; padding: 1em 5%;display: inline-block;}
@@ -15,7 +26,7 @@ small a{font-size: 12px;padding: 1em 1em 1em 0;width: auto}
 .logo, .mn{ display: inline-block; float: left;height: 100px;}
 .logo{padding-left: 33.33%; width: 33.33%; text-align: center;}
 .logo img {max-width: 100%; max-height: 100%; height: 100%; width: auto;}
-p {padding:1em 5%; line-height: 1.5em;word-break: break-word;}
+p {padding:1em 5%; line-height: 1.5em;word-break: break-word;font-weight: 100;}
 p.attachment{ padding:0;}
 
 .home{width: 100%;display:inline-block;}
@@ -52,14 +63,14 @@ p.attachment{ padding:0;}
 .comment-reply-title small{padding:0}
 .comment-reply-title small a{padding: 1em 0 0 0}
 
-/*MENU*/
+/* menu */
 .mn input, .mn label, .mn nav{margin: 0; padding: 0; box-sizing: border-box; }
 .hamburger-checkbox {position: absolute; opacity: 0; }
 .hamburger-label {position: absolute; z-index: 1; display: block; font-size: 42px; text-align: center; right: 15px;top: 15px;cursor: pointer;}
 .hamburger-checkbox:checked ~ .hamburger-label:before {position: absolute; top: 0; left: 0; z-index: 1; display: block; font-size: 42px; text-align: center; }
 .mainmenu {overflow: hidden; width: 0; height: 100%; transition: all .3s; left: 0;position: fixed;}
-.hamburger-checkbox:checked ~ .mainmenu {width: 50%; height: 100%; padding: 1em; background: #fff; left: 0; position: fixed; z-index: 1; }
-.menu li a{padding: .5em 0; display: inline-block; width: 100%; text-align: left;font-size: 20px;}
+.hamburger-checkbox:checked ~ .mainmenu {width: 50%; height: 100%; padding: 1em;left: 0; position: fixed; z-index: 1; background-color: rgba(255,255,255,0.8)}
+.menu li a{padding: .5em 0; display: inline-block; width: 100%; text-align: left;font-size: 20px; font-weight: 100;}
 .menu-social-container{text-align: center;margin-top: 42px;}
 #menu-social, #menu-social li{display: inline-block;width: 100%}
 #menu-social li, #menu-social li a{width: 100%; height: 48px; font-size: 0;}
@@ -71,7 +82,7 @@ p.attachment{ padding:0;}
 .nxpt {bottom: 0; position: fixed; width: 100%}
 .nxpt a{padding: 1em 5%; display: inline-block;width: 90%;   background-color: #fff;}
 
-/*WP CLASSES*/
+/* wp classes */
 .wp-caption {margin-bottom: 1.6em; max-width: 100%; }
 .wp-caption-text {color: #707070; color: rgba(51, 51, 51, 0.7); font-family: "Noto Sans", sans-serif; font-size: 12px; font-size: 1.2rem; line-height: 1.5; padding: 0.5em 0; }
 .sticky {}
@@ -81,7 +92,7 @@ p.attachment{ padding:0;}
 .alignright {float: right; }
 .aligncenter {float: none; }
 
-/*CONTACT FORM 7*/
+/* contact form 7 */
 div.wpcf7 {padding: 1em 5%;}
 .wpcf7 p {width: 90%; display: inline-block;font-size: 16px}
 .wpcf7 p input, .wpcf7 p textarea{width: 90%; border: 1px solid #999; padding: .5em 5%; float: none; }
@@ -89,6 +100,9 @@ div.wpcf7 {padding: 1em 5%;}
 input.wpcf7-form-control.wpcf7-submit{ color:#fff; width: 100%;  border: 1px solid #999;  padding: .5em 5%;  float: none; background-color: rgba(40, 40, 40, 1);}
 
 
+/* photoMosaic */
+
+.photoMosaic{margin-bottom: 0;}
 
 @media all and (min-width: 420px) {
 .gallery-item{width:50%!important;}
@@ -114,14 +128,14 @@ section { width: 50%; }
 }
 #menu-social .menu li a{background-color: none;}
 #menu-social li a:before, #menu-social li a:hover, #menu-social li a:focus, #menu-social li a:active, #menu-social li a:hover:before, #menu-social li a:focus:before, #menu-social li a:active:before{;background-color: rgba(255, 255, 255, 0);}
-/*IE*/
+/* IE */
 .ie .hamburger-checkbox, .ie .hamburger-label{display:none}
 .ie .browserupgrade{background: #f00;color: black;text-align:center;height:50px; line-height:50px;position:fixed;width:100%; display:inline-block; z-index:9999;}
 .ie .browserupgrade a{color: black!important;}
 .ie .menu LI A:hover{color:black}
 .ie #menu-social LI{float:left;}
-/*SIMPLE SHARE BUTTONS*/
-.ssba div {  color: white;  line-height: 32px; width: 90%; padding: 0 5%;}
+/* simple share buttons */
+.ssba div {  color: white;  line-height: 32px; width: 90%; padding: 0 5%;font-weight: 100;}
 .ssba_facebook_share{margin-right: 10px}
-/*PRINT*/
+/* print */
 @media print {*, *:before, *:after {background: transparent !important; color: #000 !important; box-shadow: none !important; text-shadow: none !important; } a, a:visited {text-decoration: underline; } a[href]:after {content: " (" attr(href) ")"; } abbr[title]:after {content: " (" attr(title) ")"; } a[href^="#"]:after, a[href^="javascript:"]:after {content: ""; } pre, blockquote {border: 1px solid #999; page-break-inside: avoid; } thead {display: table-header-group; } tr, img {page-break-inside: avoid; } img {max-width: 100% !important; } p, h2, h3 {orphans: 3; widows: 3; } h2, h3 {page-break-after: avoid; } }
